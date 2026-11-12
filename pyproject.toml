@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rlfin"
+version = "0.1.0"
+description = "Reinforcement learning and dynamic programming for finance: bandits for asset selection, optimal execution, Q-learning trading"
+requires-python = ">=3.10"
+authors = [{name = "Dr. Muhammad Imran Bhatti"}]
+license = {text = "MIT"}
+dependencies = ["numpy", "pandas"]
+
+[project.optional-dependencies]
+notebooks = ["matplotlib", "seaborn", "yfinance", "jupyter"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
